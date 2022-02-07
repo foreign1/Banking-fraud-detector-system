@@ -1,0 +1,12 @@
+{% extends "base_generic.html" %}
+
+{% block head %}
+    <meta http-equiv="refresh" content="2; url='{% url 'output' %}' " />
+{% endblock %}
+
+{% block content %}
+    <div class="processing">
+        <p id="processing">Processing...</p>
+    </div>
+{% endblock %}
+
