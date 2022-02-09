@@ -1,11 +1,26 @@
 {% extends "base_generic.html" %}
 
 {% block content %}
-<h1>Credit Card Fraud Detection System Home</h1>
+<div class="jumbotron text-center">
+    <h1>Credit Card Fraud Detection System</h1>
+    <p>Upload a CSV format data file to initiate operation!</p>
+</div>
 
-<form action="{% url 'index' %}" method="post">
-    {% csrf_token %}
-    {{ form }}
-    <input type="submit" value="Submit">
-</form>
+<div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        </div>
+      <div class="col-sm-4">
+        <form class="upload-file" action="{% url 'index' %}" method="post">
+            {% csrf_token %}
+            {{ form }}
+            <div class="form-submit">
+                <input type="submit" class="btn btn-outline-primary submit" value="Submit">
+            </div>
+        </form>
+      </div>
+      <div class="col-sm-4">
+        </div>
+    </div>
+  </div>
 {% endblock %}

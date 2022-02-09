@@ -1,5 +1,28 @@
-.sidebar-nav {
-    margin-top: 20px;
-    padding: 0;
-    list-style: none;
+body{
+    background-color: #F5F5F5;
+    margin: 0px;
+    padding: 0px;
+}
+
+input.submit{
+    display: block;
+    width: 350px;
+}
+
+div.form-submit {
+    margin-top: 50px;
+}
+
+form.input[type="file" i]#id_fraud_data {
+    width: 350px;
+    height: 100px;
+    background-color: firebrick;
+}
+input[type="file" i] :hover {
+    background-color: dimgrey;
+}
+
+input#id_fraud_data {
+    width: 350px;
+    
 }
