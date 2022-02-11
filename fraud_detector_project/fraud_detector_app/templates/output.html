@@ -2,8 +2,58 @@
 
 {% block content %}
 <div>
-    <h3>
-        Results
-    </h3>
+    <div class="container">
+        <div id="rowinner">
+            
+          <div>
+            <div id="main">
+                <div class="main-header">
+                    <h5 class="main-header-text">Model output</h5>
+                </div>
+                <div class="main-body">
+                    <div class="left-pane">
+                        <h3 class="actions-left-pane">Actions</h3>
+                        <form class="upload-file" action="{% url 'index' %}" method="get">
+                            {% csrf_token %}
+                            <div class="form-submit">
+                                <input type="submit" class="btn btn-primary restart" value="Train another">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="right-pane">
+                        <div class="models-output-block">
+                            <h5>Random Forest Model</h5>
+                            <ul class="model-results">
+                                <li><span>Model Accuracy: </span>{{ model_accuracy }}</li>
+                                <li><span>Recall Score: </span>{{ recall_score }}</li>
+                                <li><span>Precision Score: </span>{{ precision_score }}</li>
+                                <li><span>F-Score: </span>{{ f_score }}</li>
+                            </ul>
+                        </div>
+                        <div class="models-output-block">
+                            <h5>Multilayer Perceptron Model</h5>
+                            <ul class="model-results">
+                                <li><span>Model Accuracy: </span>{{ model_accuracy2 }}</li>
+                                <li><span>Recall Score: </span>{{ recall_score2 }}</li>
+                                <li><span>Precision Score: </span>{{ precision_score2 }}</li>
+                                <li><span>F-Score: </span>{{ f_score2 }}</li>
+                            </ul>
+                        </div>
+                        <div class="restart">
+                            
+                        <form class="upload-file" action="{% url 'index' %}" method="get">
+                            {% csrf_token %}
+                            <div class="form-submit">
+                                <input type="submit" class="btn btn-outline-primary submit btn_color" value="Retrain Models">
+                            </div>
+                        </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
 </div>
 {% endblock %}

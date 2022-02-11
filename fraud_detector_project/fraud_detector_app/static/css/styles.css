@@ -2,6 +2,11 @@ body{
     background-color: #F5F5F5;
     margin: 0px;
     padding: 0px;
+    width: auto;
+}
+
+.super-container {
+    color: #082042
 }
 
 input.submit{
@@ -26,3 +31,76 @@ input#id_fraud_data {
     width: 350px;
     
 }
+
+div#rowinner{
+    margin-top: 100px;
+}
+
+#main {
+    width: 800px;
+    height: 600px;
+    background-color: white;
+    margin: auto;
+    color: #082042;
+    border: 1px solid #082042;
+}
+
+.main-header {
+    height: 50px;
+    background-color: #082042;
+    color: white;
+    padding-left: 80px;
+    padding-top: 10px;
+}
+
+div.main-body div.left-pane {
+    width: 25%;
+    height: 550px;
+    border-right: 1px solid #082042;
+    float: left;
+    padding-left: 45px;
+    padding-top: 50px;
+}
+
+.actions-left-pane {
+    
+}
+
+div.main-body div.right-pane {
+    width: 75%;
+    float: right;
+    list-style-type: none;
+    padding-top: 50px;
+    padding-left: 50px;
+}
+
+.model-results {
+    list-style-type: none;
+}
+
+.btn {
+    color: #082042;
+}
+
+.btn_color {
+    color: #082042;
+}
+
+
+
+.processing-container {
+    font-family: arial;
+    font-size: 24px;
+    margin: 25px;
+    width: 350px;
+    height: 200px;
+    outline: dashed 1px black;
+  }
+  
+  .child {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    /* Center horizontally*/
+    margin: 0 auto;
+  }
