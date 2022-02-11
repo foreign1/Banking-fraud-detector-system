@@ -11,8 +11,8 @@ def index(request):
         upload_data = UploadDataForm(request)
         return render(request, 'processing.html', {"redirect_attribute": "<meta http-equiv='refresh' content='seconds'; url='{% url 'outcome' %}'} >"})
 
-        if upload_data.is_valid():
-            return render(request, 'processing.html', {'processing': 'processing'})
+        # if upload_data.is_valid():
+        #     return render(request, 'processing.html', {'processing': 'processing'})
             # return HttpResponseRedirect('/processing/') 
     else: upload_data = UploadDataForm
 
@@ -23,19 +23,31 @@ def processing(request):
     return render(request, 'index.html', context={'processing': "Processing..."})
 
 def output(request):
+    # context = {
+    #     'model_1': {
+    #         'model_accuracy' : (0.9986482216214319, 56792),
+    #         'recall_score': (0.9489795918367347, 72),
+    #         'precision_score': (0.5636363636363636, 5),
+    #         'f-score': (0.7072243346007604, 92),
+    #     },
+    #     'model_2': {
+    #         'model_accuracy': (0.9992099996488887, 56790),
+    #         'loss_value': (0.008827306184946626, 41),
+    #         'recall_score': (0.9693877551020408, 41),
+    #         'precision_score': (0.6934306569343066, 2),
+    #         'f-score': (0.8085106382978723, 83),
+    #     }
+    # }
     context = {
-        'model_1': {
-            'model_accuracy' : (0.9986482216214319, 56792),
-            'recall_score': (0.9489795918367347, 72),
-            'precision_score': (0.5636363636363636, 5),
-            'f-score': (0.7072243346007604, 92),
-        },
-        'model_2': {
-            'model_accuracy': (0.9992099996488887, 56790),
-            'loss_value': (0.008827306184946626, 41),
-            'recall_score': (0.9693877551020408, 41),
-            'precision_score': (0.6934306569343066, 2),
-            'f-score': (0.8085106382978723, 83),
-        }
+        'model_accuracy' :56792,
+        'recall_score':72,
+        'precision_score': 5,
+        'f_score':92,
+        
+        'model_accuracy2':56790,
+        'loss_value2': 41,
+        'recall_score2':41,
+        'precision_score2':2,
+        'f_score2': 83,
     }
-    return render(request, 'output.html', context={})
+    return render(request, 'output.html', context=context)

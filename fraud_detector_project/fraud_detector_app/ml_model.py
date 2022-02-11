@@ -45,8 +45,8 @@ def f2_score(score):
 
 
 
-print(m2_accuracy(Y_pred_cls['model_accuracy']))
-print(r2_score(Y_pred_cls['recall_score']))
-print(p2_score(Y_pred_cls['precision_score']))
-print(f2_score(Y_pred_cls['f-score']))
+# print(m2_accuracy(Y_pred_cls['model_accuracy']))
+# print(r2_score(Y_pred_cls['recall_score']))
+# print(p2_score(Y_pred_cls['precision_score']))
+# print(f2_score(Y_pred_cls['f-score']))
 
