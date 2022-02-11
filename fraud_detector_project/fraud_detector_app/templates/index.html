@@ -1,12 +1,14 @@
 {% extends "base_generic.html" %}
 
 {% block content %}
-<div class="jumbotron text-center">
-    <h1>Credit Card Fraud Detection System</h1>
+
+<div class="super-container">
+  <div class="jumbotron text-center super-container">
+    <h1>Credit Card Fraud Detection Model</h1>
     <p>Upload a CSV format data file to initiate operation!</p>
 </div>
 
-<div class="container">
+<div class="container super-container">
     <div class="row">
       <div class="col-sm-4">
         </div>
@@ -15,12 +17,16 @@
             {% csrf_token %}
             {{ form }}
             <div class="form-submit">
-                <input type="submit" class="btn btn-outline-primary submit" value="Submit">
+                <input type="submit" class="btn btn-outline-primary submit" value="Click to process data">
             </div>
         </form>
       </div>
       <div class="col-sm-4">
+          <div class="output-col">
+          </div>
         </div>
     </div>
   </div>
+
+</div>
 {% endblock %}
